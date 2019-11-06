@@ -9,5 +9,9 @@
   "devDependencies": {
     "parcel": "^1.12.4",
     "stylus": "^0.54.7"
+  },
+  "scripts": {
+    "start": "yarn parcel watch src/app.js src/style.css",
+    "build": "yarn parcel build src/app.js src/style.css --no-source-maps"
   }
 }

@@ -10,4 +10,5 @@ curl -sSo /tmp/install-racket https://mirror.racket-lang.org/installers/7.4/rack
 # Render the static assets
 /tmp/racket/bin/raco pollen render
 
-yarn parcel build src/app.js src/style.css --no-source-maps
+# Build JS and CSS
+yarn build

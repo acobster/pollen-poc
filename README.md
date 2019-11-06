@@ -23,4 +23,12 @@ raco pollen render
 raco pollen start
 ```
 
+## Styles/JS
+
+To update styles, watch for changes in `/src` with:
+
+```
+yarn start
+```
+
 See also: `build.sh` and `package.json` in this repo.
