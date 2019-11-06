@@ -12,6 +12,14 @@ justified()
   flex-wrap wrap
   justify-content center
 
+main-heading()
+  font-family 'Playfair Display', serif
+  font-style normal
+
+secondary-heading()
+  font-family 'Playfair Display', serif
+  font-style italic
+
 
 /* base */
 
@@ -19,8 +27,10 @@ body
   width: 95%
   max-width: 50em
   margin: auto
+  font-family 'Helvetica Neue', sans-serif
 
 h1
+  main-heading()
   color: #600
 
   > img
@@ -29,13 +39,20 @@ h1
     margin 0 0 -0.4em 0
 
 h2
-  font-style italic
+  secondary-heading()
+
+  nav article &
+    main-heading()
+
+h3
+  secondary-heading()
 
 header
   margin 1em auto 3em
+  text-align center
 
-nav article h3
-  font-style italic
+article
+  margin 0 auto 2em
 
 footer nav
   justified()
