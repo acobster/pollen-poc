@@ -1,3 +1,4 @@
 *.html
 /compiled/
+/dist/
 *.log
