@@ -1,0 +1,25 @@
+body { width: 95%; max-width: 60em; margin: auto; }
+h1 { color: #600; }
+nav { position: relative; }
+
+
+/* links */
+
+svg-content(path)
+	display: inline-block
+	content: url(path)
+
+a[rel=prev]
+	&:before
+		svg-content("/img/left.svg")
+
+a[rel=next]
+	&:after
+		svg-content("/img/right.svg")
+
+
+/* misc */
+
+.copyleft
+	display: inline-block
+	transform: rotate(180deg)

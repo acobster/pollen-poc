@@ -11,7 +11,7 @@
     "stylus": "^0.54.7"
   },
   "scripts": {
-    "start": "yarn parcel watch src/app.js src/style.css",
-    "build": "yarn parcel build src/app.js src/style.css --no-source-maps"
+    "start": "yarn parcel watch src/app.js src/style.styl",
+    "build": "yarn parcel build src/app.js src/style.styl --no-source-maps"
   }
 }

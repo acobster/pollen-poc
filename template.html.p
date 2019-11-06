@@ -24,6 +24,10 @@
         <a href="/">Home</a>
         <a href="/about.html">About</a>
       </nav>
+
+      <p><span class="copyleft">©</span> 2019 Coby Tamayo</p>
+      <p>Creative Commons License (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p>
+      <p>This site was built using <a href="https://docs.racket-lang.org/pollen/">Pollen</a></p>
     </footer>
 
     <script src="/dist/app.js"></script>

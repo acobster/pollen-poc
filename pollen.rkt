@@ -26,9 +26,11 @@
         ,@(select-from-doc 'h1 pagesym))))
 
 (define (blog-listing ptree-path)
-  `(nav ,@(map (lambda (pagesym)
-                 (page-link '() pagesym))
-               (pagetree->list (get-pagetree ptree-path)))))
+	`(nav ,@(map (lambda (pagesym)
+								 `(article
+										,(page-link '() pagesym)
+										(p ,@(select-from-doc 'h2 pagesym))))
+							 (pagetree->list (get-pagetree ptree-path)))))
 
 (define (rel-link rel pagesym)
   (if pagesym
@@ -37,9 +39,6 @@
 
 
 ;; custom utility elements
-(define items (default-tag-function 'ul))
-(define item (default-tag-function 'li 'p))
-
 (define (link url text) `(a ((href ,url)) ,text))
 
 (define (code lang snippet) `(pre ((class ,(string-append "lang--" lang)))
