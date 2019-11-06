@@ -1,0 +1,13 @@
+{
+  "name": "tomato-tomato",
+  "version": "0.1.0",
+  "description": "Tomato Tomato, reloaded",
+  "main": "index.js",
+  "repository": "git@github.com:acobster/tomato2.git",
+  "author": "Coby Tamayo <acobster@gmail.com>",
+  "license": "GPL",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "stylus": "^0.54.7"
+  }
+}
