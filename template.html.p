@@ -10,24 +10,34 @@
   <body>
 
     <header>
-      <a href="/"><h1>Tomato Tomato</h1></a>
-      <h2>On code, and sometimes other things, by Coby Tamayo</h2>
+      <a href="/">
+        <h1><img src="/src/img/tomato.svg" alt="Tomato Logo"> Tomato Tomato</h1>
+      </a>
+      <h2>Coby's blog about code, and sometimes other things</h2>
     </header>
 
-    ◊(->html doc)
+    <main>
+      ◊(->html doc)
+        ◊(if (or (previous here) (next here)) {
+          <nav>
+            ◊(rel-link "prev" (previous here))
+            ◊(rel-link "next" (next here))
+          </nav>
+        } "")
+      <hr>
+    </main>
 
     <footer>
       <nav>
-        ◊(rel-link "prev" (previous here))
-        ◊(rel-link "next" (next here))
-        <hr>
         <a href="/">Home</a>
         <a href="/about.html">About</a>
       </nav>
 
-      <p><span class="copyleft">©</span> 2019 Coby Tamayo</p>
-      <p>Creative Commons License (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p>
-      <p>This site was built using <a href="https://docs.racket-lang.org/pollen/">Pollen</a></p>
+      <aside>
+        <p><span class="copyleft">©</span> 2019 Coby Tamayo</p>
+        <p>Creative Commons License (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p>
+        <p>This site was built using <a href="https://docs.racket-lang.org/pollen/">Pollen</a></p>
+      </aside>
     </footer>
 
     <script src="/dist/app.js"></script>

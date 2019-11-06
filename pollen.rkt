@@ -1,10 +1,20 @@
 #lang racket/base
-(require pollen/core pollen/tag pollen/template pollen/pagetree pollen/decode txexpr)
+(require pollen/core
+         pollen/tag
+         pollen/template
+         pollen/pagetree
+         pollen/decode
+         txexpr
+         web-server/templates
+         racket/file)
 (provide (all-defined-out))
+
+(define (include-as-html path)
+  (file->string path #:mode 'text))
 
 ;; render an <article> as the root of each post's main content
 (define (root . elements)
-  `(main
+  `(div
      ,@(decode-elements
          elements
          #:txexpr-elements-proc decode-paragraphs
@@ -28,8 +38,8 @@
 (define (blog-listing ptree-path)
 	`(nav ,@(map (lambda (pagesym)
 								 `(article
-										,(page-link '() pagesym)
-										(p ,@(select-from-doc 'h2 pagesym))))
+										(h2 ,(page-link '() pagesym))
+										(h3 ,@(select-from-doc 'h2 pagesym))))
 							 (pagetree->list (get-pagetree ptree-path)))))
 
 (define (rel-link rel pagesym)
