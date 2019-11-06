@@ -9,8 +9,9 @@ curl -sSo /tmp/install-racket https://mirror.racket-lang.org/installers/7.4/rack
 
 # Render the static pages
 /tmp/racket/bin/raco pollen render
-# Render homepage explicitly for now:
+# Render pages explicitly for now:
 /tmp/racket/bin/raco pollen render index.html.pm
+/tmp/racket/bin/raco pollen render about.html.pm
 
 # Build JS and CSS
 yarn build

@@ -44,3 +44,5 @@
 
 (define (code lang snippet) `(pre ((class ,(string-append "lang--" lang)))
                                   (code ,snippet)))
+
+(define (img src alt) `(img ((src ,src) (alt ,alt))))
