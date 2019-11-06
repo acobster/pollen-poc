@@ -23,6 +23,12 @@ raco pollen render
 raco pollen start
 ```
 
+Or specify your own port:
+
+```
+raco pollen start . <port>
+```
+
 ## Styles/JS
 
 To update styles, watch for changes in `/src` with:
