@@ -10,17 +10,20 @@
   <body>
 
     <header>
-      <h1>Tomato Tomato</h1>
-      <h2>Coby's blog about code and stuff</h2>
+      <a href="/"><h1>Tomato Tomato</h1></a>
+      <h2>On code, and sometimes other things, by Coby Tamayo</h2>
     </header>
 
     ◊(->html doc)
 
     <footer>
-      ◊(define prev-page (previous here))
-      ◊when/splice[prev-page]{<a href="◊|prev-page|">◊(select 'h1 prev-page)</a>}
-      ◊(define next-page (next here))
-      ◊when/splice[next-page]{<a href="◊|next-page|">◊(select 'h1 next-page)</a>}
+      <nav>
+        ◊(rel-link "prev" (previous here))
+        ◊(rel-link "next" (next here))
+        <hr>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+      </nav>
     </footer>
 
     <script src="/dist/app.js"></script>
