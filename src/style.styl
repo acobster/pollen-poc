@@ -13,40 +13,47 @@ justified()
   flex-wrap wrap
   justify-content center
 
-heading-font()
+heading-font(base-size)
   font-family 'Georgia', serif
-  font-weight 500
-  letter-spacing 0
-  letter-spacing -0.15px
-  word-spacing -0.3px;
+  font-size (base-size * (10/11))
+  font-weight 700
+  line-height 1.55
+  letter-spacing -0.4px
 
   /* use FontFaceObserver to add this class when font finishes loading */
   .Lora &
     font-family 'Lora', serif
+    font-size base-size
+    line-height 1.4
     font-weight 700
-    line-height 1
-    letter-spacing 0.25px
-    word-spacing 0
+    letter-spacing 0.45px
 
-main-heading()
-  heading-font()
+main-heading(base-size)
+  heading-font(base-size)
   font-style normal
   color highlight-color
 
-secondary-heading()
-  heading-font()
+secondary-heading(base-size)
+  heading-font(base-size)
+  font-size (base-size * (6/7))
+  line-height 1.9
   font-style italic
   color secondary-color
 
-copy()
+copy(base-size)
   /* pre-Lato */
   font-family Arial
+  font-size (base-size * (18/19))
+  font-weight normal
+  line-height 1.43
   letter-spacing -0.2px
-  word-spacing -0.65px;
+  word-spacing 0
 
   /* use FontFaceObserver to add this class when font finishes loading */
   .Lato &
     font-family 'Lato', sans-serif
+    font-weight: normal
+    line-height 1.4
     letter-spacing 0
     word-spacing 0
 
@@ -55,35 +62,41 @@ copy()
 
 body
   width: 95%
-  max-width: 45em
+  max-width: 45rem
   margin: auto
   font-size 18px
 
-  copy()
+  copy(1.05rem)
 
 h1
-  main-heading()
+  main-heading(1.8rem)
 
   > img
     display inline-block
-    width: 1.5em
-    margin 0 0 -0.4em 0
+    width: 1.5rem
+    margin 0 0 -0.4rem 0
 
 h2
-  secondary-heading()
+  secondary-heading(1.4rem)
 
   nav article &
-    main-heading()
+    main-heading(1.2rem)
 
 h3
-  secondary-heading()
+  secondary-heading(1.2rem)
 
 header
-  margin 1em auto 3em
+  margin 1rem auto 3rem
   text-align center
 
 article
-  margin 0 auto 2em
+  margin 0 auto 2rem
+
+p
+  word-spacing -0.65px;
+
+  .Lato &
+    word-spacing 0
 
 footer nav
   justified()
@@ -92,7 +105,7 @@ footer nav
     margin 1em
 
 aside
-  margin 2em auto
+  margin 2rem auto
   justified()
 
   p
