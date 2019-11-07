@@ -19,12 +19,12 @@
 
     <main>
       ◊(->html doc)
-        ◊(if (or (previous here) (next here)) {
-          <nav>
-            ◊(rel-link "prev" (previous here))
-            ◊(rel-link "next" (next here))
-          </nav>
-        } "")
+      ◊(if (or (previous here) (next here)) {
+        <nav>
+          ◊(rel-link "prev" (previous here))
+          ◊(rel-link "next" (next here))
+        </nav>
+      } "")
       <hr>
     </main>
 

@@ -13,5 +13,8 @@
   "scripts": {
     "start": "yarn parcel watch src/app.js src/style.styl",
     "build": "yarn parcel build src/app.js src/style.styl --no-source-maps"
+  },
+  "dependencies": {
+    "fontfaceobserver": "^2.1.0"
   }
 }
