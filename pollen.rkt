@@ -1,4 +1,4 @@
-#lang racket/base
+#lang racket
 (require pollen/core
          pollen/tag
          pollen/template
@@ -36,11 +36,12 @@
         ,@(select-from-doc 'h1 pagesym))))
 
 (define (blog-listing ptree-path)
-	`(nav ,@(map (lambda (pagesym)
-								 `(article
-										(h2 ,(page-link '() pagesym))
-										(h3 ,@(select-from-doc 'h2 pagesym))))
-							 (pagetree->list (get-pagetree ptree-path)))))
+  `(nav ,@(map (lambda (pagesym)
+                 (let ([subheading (first (select-from-doc 'h2 pagesym))])
+                   `(article
+                      (h2 ,(page-link '() pagesym))
+                      (h3 ,subheading))))
+							 (reverse (pagetree->list (get-pagetree ptree-path))))))
 
 (define (rel-link rel pagesym)
   (if pagesym
