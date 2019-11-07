@@ -1,8 +1,12 @@
-import FontFaceObserver from 'fontfaceobserver'
+import FoutLoader from './FoutLoader'
 
-new FontFaceObserver('Lato').load().then(() => {
-  document.documentElement.classList.add('Lato')
+new FoutLoader({
+  fontName: 'Lato',
+  fontLoadedClass: 'Lato',
+  localStorageKey: 'font-cached-lato',
 })
-new FontFaceObserver('Lora').load().then(() => {
-  document.documentElement.classList.add('Lora')
+new FoutLoader({
+  fontName: 'Lora',
+  fontLoadedClass: 'Lora',
+  localStorageKey: 'font-cached-lora',
 })
