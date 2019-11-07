@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>◊(page-title (select 'h1 doc))</title>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Lora:700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="◊(select-from-metas 'description (current-metas))">
