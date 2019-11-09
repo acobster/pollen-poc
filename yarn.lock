@@ -2226,6 +2226,13 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
+fout-loader@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/fout-loader/-/fout-loader-0.2.1.tgz#a0cc4ce99430f3be4c8c6bded2115e6c369b2aee"
+  integrity sha512-j+jEnmtP/RrclJwhCn3yK2cgzXx5UVcAE4m/g7mRlrCeEb28DycNYLSlVI7GJUUf1wZ4fhHQz9Va7DEWr5BTSA==
+  dependencies:
+    fontfaceobserver "^2.1.0"
+
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"

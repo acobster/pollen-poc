@@ -1,11 +1,11 @@
-import FoutLoader from './FoutLoader'
+import fout from 'fout-loader'
 
-new FoutLoader({
+fout({
   fontName: 'Lato',
   fontLoadedClass: 'Lato',
   localStorageKey: 'font-cached-lato',
 })
-new FoutLoader({
+fout({
   fontName: 'Lora',
   fontLoadedClass: 'Lora',
   localStorageKey: 'font-cached-lora',

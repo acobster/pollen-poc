@@ -15,6 +15,7 @@
     "build": "yarn parcel build src/app.js src/style.styl --no-source-maps"
   },
   "dependencies": {
-    "fontfaceobserver": "^2.1.0"
+    "fontfaceobserver": "^2.1.0",
+    "fout-loader": "^0.2.1"
   }
 }
